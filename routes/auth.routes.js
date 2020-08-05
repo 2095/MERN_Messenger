@@ -14,12 +14,13 @@ router.post(
   ],
   async (req, res) => {
   try {
+
     const errors = validationResult(req);
 
     if(!errors.isEmpty()) {
       return res.status(400).json({
         errors: errors.array(),
-        message: 'Invalid data is entered'
+        message: 'Password must have at least 6 characters'
       })
     }
 
@@ -77,6 +78,8 @@ router.post('/login',
       config.get('jwtSecret'),
       { expiresIn: '1h' }
     )
+
+    console.log(user.id);
 
     res.json({ token, userId: user.id });
 

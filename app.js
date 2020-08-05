@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const routes = require('./routes/auth.routes');
 
 const app = express();
+app.use(express.json({ extended: true }));
+
 const port = config.get('port');
 const mongoUrl = config.get('mongoUrl');
 
