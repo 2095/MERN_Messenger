@@ -1,0 +1,31 @@
+.popupWindow {
+  font-size: 12px; 
+}
+.popupWindow > .popupHeader {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.popupWindow > .popupContent {
+  width: 100%;
+  padding: 10px 5px;
+}
+.popupWindow > .popupActions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.popupWindow > .popupSearch{
+  width: 50rem;
+}
+
+.logButton{
+  margin: 1px;
+}
+
+.exitButton{
+  background-color:red;
+}
