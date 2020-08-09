@@ -4,10 +4,11 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 const {check, validationResult} = require('express-validator');
 const User = require('../models/User');
-const router = Router();
+
+const authRouter = Router();
 
 // /api/auth/register
-router.post(
+authRouter.post(
   '/register',
   [
     check('password', 'Password must have at least 6 characters').isLength({min: 6})
@@ -26,6 +27,7 @@ router.post(
 
     const {login, password} = req.body;
 
+    //Проверяем существует ли пользователь
     const candidate = await User.findOne({login});
 
     if(candidate) {
@@ -47,7 +49,8 @@ router.post(
 });
 
 // /api/auth/login
-router.post('/login',
+authRouter.post(
+  '/login',
   async (req, res) => {
     try {
     const errors = validationResult(req);
@@ -88,4 +91,4 @@ router.post('/login',
   }
 });
 
-module.exports = router;
+module.exports = authRouter;

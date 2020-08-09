@@ -1,3 +1,8 @@
+.inputSearch{
+  width: 50rem;
+  margin: 8px;
+}
+
 .popupWindow {
   font-size: 12px; 
 }

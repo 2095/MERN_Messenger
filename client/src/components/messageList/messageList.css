@@ -1,0 +1,33 @@
+.messageList{
+    border: 1px solid black;
+    height: 515px;
+    width: 450px;
+    margin-right: 150px;
+    overflow-y: scroll;
+  }
+
+.message{
+  border: 2px solid #dedede;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  height: 80px;
+}
+
+.sender{
+  float: left;
+  font-size: 12px;
+}
+
+.time{
+  float: right;
+  font-size: 12px;
+}
+
+.textMessage{
+  /* float: left; */
+  font-size: 17px;
+  color: black;
+  margin-top: 25px;
+}
