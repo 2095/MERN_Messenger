@@ -1,5 +1,0 @@
-{
-  "port": 5000,
-  "jwtSecret": "messenger777",
-  "mongoUrl": "mongodb+srv://Rokotov:qwerty12345@cluster0-ivnrw.mongodb.net/app?retryWrites=true&w=majority"
-}
